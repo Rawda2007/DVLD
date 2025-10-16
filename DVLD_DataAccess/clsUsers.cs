@@ -84,6 +84,36 @@ namespace DVLD_DataAccess
             }
 
         }
+        public static User GetUserByPersonID(int PersonID)
+        {
+            User entity = null;
+            using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                connection.Open();
+                string query = "SELECT UserID,UserName,Password,IsActive FROM Users WHERE PersonID = @PersonID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        
+                        if (reader.Read()) // تحريك المؤشر لأول صف
+                        {
+                            entity = new User(
+                               reader[1].ToString(),
+                                 Convert.ToInt32(reader[0]),
+                                 reader[2].ToString(),
+                                    Convert.ToInt32(reader[3])
+                            );
+                        }
+                    }
+                }
+                return entity;
+            }
+
+        }
+
+
         public static bool DoPersonConnectecedToUser(int PersonID)
         {
             int result = 0;
@@ -134,5 +164,101 @@ namespace DVLD_DataAccess
             }
             return result > 0;
         }
+
+        //Check delete
+        public static bool DoUserConnectAppplicaton(int UserID)
+        {
+            int result = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+                {
+                    connection.Open();
+                    string Query = "select count(*) from Applications where CreatedByUserID=@UserID";
+                    SqlCommand command = new SqlCommand(Query, connection);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                     result = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return result > 0;
+        }
+
+        public static bool UpdateUser(User entity)
+        {
+            int rowsAffected = 0;
+            using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                connection.Open();
+                string query = @"UPDATE Users 
+                                 SET UserName = @UserName, 
+                                     Password = @Password, 
+                                     IsActive = @IsActive 
+                                 WHERE PersonID = @PersonID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserName", entity.UserName);
+                    command.Parameters.AddWithValue("@Password", entity.Password);
+                    command.Parameters.AddWithValue("@IsActive", entity.IsActive);
+                    command.Parameters.AddWithValue("@PersonID", entity.PersonID);
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+            return rowsAffected>0;
+        }
+
+        public static bool ChangePassword(int PersonID,string OldPassword,string NewPassword)
+        {
+            int rowAffects = 0;
+            try
+            {
+                using(SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+                {
+                    connection.Open();
+                    string query=@"update Users set Password=@NewPassword 
+                                  where PersonID=@PersonID and Password=@OldPassword";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@NewPassword", NewPassword);
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    command.Parameters.AddWithValue("@OldPassword", OldPassword);
+                    rowAffects=Convert.ToInt32(command.ExecuteNonQuery());
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return rowAffects > 0;
+        }
+
+        public static int PersonIDByUserName(string UserName)
+        {
+            int personID = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+                {
+                    connection.Open();
+                    string query = "select PersonID from Users where UserName=@UserName";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@UserName", UserName);
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        personID = Convert.ToInt32(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return personID;
+        }
+
     }
 }

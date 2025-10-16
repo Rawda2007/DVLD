@@ -30,11 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.infoPersonWithFilter1 = new DVLD.People.Controls.infoPersonWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Active = new System.Windows.Forms.CheckBox();
             this.Password = new System.Windows.Forms.TextBox();
             this.cPassword = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.TextBox();
@@ -43,7 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Active = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.infoPersonWithFilter1 = new DVLD.People.Controls.infoPersonWithFilter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -73,27 +73,6 @@
             this.tabPage1.Text = "Personal Information";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Image = global::DVLD.Properties.Resources.right_arrow1;
-            this.button1.Location = new System.Drawing.Point(1097, 549);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 43);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // infoPersonWithFilter1
-            // 
-            this.infoPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.infoPersonWithFilter1.Location = new System.Drawing.Point(-4, 0);
-            this.infoPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.infoPersonWithFilter1.Name = "infoPersonWithFilter1";
-            this.infoPersonWithFilter1.Size = new System.Drawing.Size(1200, 629);
-            this.infoPersonWithFilter1.TabIndex = 3;
-            this.infoPersonWithFilter1.Load += new System.EventHandler(this.infoPersonWithFilter1_Load_1);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
@@ -114,33 +93,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Log in Information";
             // 
-            // button2
+            // Active
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Image = global::DVLD.Properties.Resources.bookmark__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1018, 497);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 45);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button3.Image = global::DVLD.Properties.Resources.close;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1063, 650);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Close";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Active.AutoSize = true;
+            this.Active.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Active.ForeColor = System.Drawing.Color.OrangeRed;
+            this.Active.Location = new System.Drawing.Point(170, 349);
+            this.Active.Name = "Active";
+            this.Active.Size = new System.Drawing.Size(108, 28);
+            this.Active.TabIndex = 16;
+            this.Active.Text = "Is Active";
+            this.Active.UseVisualStyleBackColor = true;
             // 
             // Password
             // 
@@ -220,17 +183,54 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "UserID :";
             // 
-            // Active
+            // button3
             // 
-            this.Active.AutoSize = true;
-            this.Active.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Active.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Active.Location = new System.Drawing.Point(170, 349);
-            this.Active.Name = "Active";
-            this.Active.Size = new System.Drawing.Size(108, 28);
-            this.Active.TabIndex = 16;
-            this.Active.Text = "Is Active";
-            this.Active.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.Image = global::DVLD.Properties.Resources.close;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(1063, 650);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(138, 43);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Close";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Gray;
+            this.button1.Image = global::DVLD.Properties.Resources.right_arrow1;
+            this.button1.Location = new System.Drawing.Point(1097, 549);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 43);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Blue;
+            this.button2.Image = global::DVLD.Properties.Resources.bookmark__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1018, 497);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 45);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // infoPersonWithFilter1
+            // 
+            this.infoPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.infoPersonWithFilter1.Location = new System.Drawing.Point(0, 3);
+            this.infoPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.infoPersonWithFilter1.Name = "infoPersonWithFilter1";
+            this.infoPersonWithFilter1.Size = new System.Drawing.Size(1200, 629);
+            this.infoPersonWithFilter1.TabIndex = 3;
+            this.infoPersonWithFilter1.Load += new System.EventHandler(this.infoPersonWithFilter1_Load_1);
             // 
             // Add_Edit_User
             // 

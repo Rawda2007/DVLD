@@ -108,10 +108,11 @@
             // infoPearson1
             // 
             this.infoPearson1.BackColor = System.Drawing.Color.White;
-            this.infoPearson1.Location = new System.Drawing.Point(0, 122);
+            this.infoPearson1.Location = new System.Drawing.Point(-3, 115);
             this.infoPearson1.Name = "infoPearson1";
             this.infoPearson1.Size = new System.Drawing.Size(931, 434);
             this.infoPearson1.TabIndex = 20;
+            this.infoPearson1.Load += new System.EventHandler(this.infoPearson1_Load_1);
             // 
             // infoPersonWithFilter
             // 

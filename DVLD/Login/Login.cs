@@ -35,7 +35,11 @@ namespace DVLD.Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (UserName.Text == "" || Passport.Text == "") return;
+            if (UserName.Text == "" || Passport.Text == "")
+            {
+                MessageBox.Show("Please Enter User Name and Password !");
+                return;
+            }
            
 
             
@@ -57,7 +61,8 @@ namespace DVLD.Login
 
                 Form form = new MainScreen();
                 form.ShowDialog();
-                }
+                this.Close();
+            }
             }
 
         }

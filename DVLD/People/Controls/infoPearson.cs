@@ -252,5 +252,10 @@ namespace DVLD.People.Controls
             personID = 0;
             CurrentID = "0";
         }
+
+        private void National_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace DVLD.People.Controls
 {
@@ -16,7 +18,8 @@ namespace DVLD.People.Controls
         public infoPersonWithFilter()
         {
             InitializeComponent();
-        }
+            FormUpdateUser(); 
+       }
 
         private void infoPersonWithFilter_Load(object sender, EventArgs e)
         {
@@ -31,6 +34,15 @@ namespace DVLD.People.Controls
             //infoPearson.Dock = DockStyle.Fill;
             //Controls.Add(infoPearson);
         }
+          public enum mode
+        {
+            Add,
+            Update
+        }
+      
+
+
+        public static mode CurrentMode= mode.Add;
 
         private void Filter_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -124,6 +136,23 @@ namespace DVLD.People.Controls
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public void FormUpdateUser()
+        {
+            if(CurrentMode== mode.Update)
+            {
+                groupBox2.Enabled = false;
+                infoPearson.mode = infoPearson.Mode.ShowDetailes;
+                infoPearson1.GetPerson();
+            }
+           
+
+        }
+
+        private void infoPearson1_Load_1(object sender, EventArgs e)
         {
 
         }

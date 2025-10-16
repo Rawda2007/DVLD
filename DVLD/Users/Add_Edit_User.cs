@@ -19,6 +19,19 @@ namespace DVLD.Users
         public Add_Edit_User()
         {
             InitializeComponent();
+            if (infoPersonWithFilter.CurrentMode == infoPersonWithFilter.mode.Update)
+            {
+                User entity = clsUser.GetUserByPersonID(infoPearson.personID);
+                if (entity != null)
+                {
+                    UserID.Text = entity.UserID.ToString();
+                    UserName.Text = entity.UserName;
+                    Password.Text = entity.Password;
+                    cPassword.Text = entity.Password;
+                    Active.Checked = (entity.IsActive == 1) ? true : false;
+                }
+
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -47,7 +60,7 @@ namespace DVLD.Users
                 MessageBox.Show("Please Enter information person ");
                 return;
             }
-            else if(clsUser.DoPersonIdConnectecedToUser(infoPearson.personID))
+            else if(clsUser.DoPersonIdConnectecedToUser(infoPearson.personID)&&infoPersonWithFilter.CurrentMode==infoPersonWithFilter.mode.Add)
             {
                 MessageBox.Show("This Person Already Connected to User ");
                 return;
@@ -75,23 +88,34 @@ namespace DVLD.Users
             }
             else
             {
-                // Save User Information
-                int active = (Active.Checked) ? 1 : 0;
-                int personID = infoPearson.personID;
-                User user = new User(personID, UserName.Text, Password.Text, active);
-                int result = DVLD_Buisness.clsUser.AddUser(user);
-                if (result == 0)
+                if(infoPersonWithFilter.CurrentMode==infoPersonWithFilter.mode.Add)
                 {
-                    MessageBox.Show("Error in Save User Information ");
-                    return;
+                    // Save User Information
+                    int active = (Active.Checked) ? 1 : 0;
+                    int personID = infoPearson.personID;
+                    User user = new User(personID, UserName.Text, Password.Text, active);
+                    int result = DVLD_Buisness.clsUser.AddUser(user);
+                    if (result == 0)
+                    {
+                        MessageBox.Show("Error in Save User Information ");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("User Added Successfully with ID : " + result);
+                        UserID.Text = result.ToString();
+
+                    }
                 }
-                else
+                else if(infoPersonWithFilter.CurrentMode== infoPersonWithFilter.mode.Update)
                 {
-                    MessageBox.Show("User Added Successfully with ID : " + result);
-                    UserID.Text = result.ToString();
+                  User Entity=new User(infoPearson.personID, UserName.Text, Password.Text, (Active.Checked) ? 1 : 0);
+                    bool result=clsUser.UpdateUser(Entity);
+                    if(result) MessageBox.Show("User Edited Successfully ");
+                    else MessageBox.Show("Error in Edit User ");
 
                 }
-                button1.Enabled = false;
+                    button1.Enabled = false;
                 button2.Enabled = false;
 
 

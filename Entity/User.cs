@@ -32,5 +32,13 @@
             this.UserName = userName;
             this.IsActive = isActive;
         }
+
+        public User( string userName,int UserId,string Password, int isActive)
+        {
+            this.UserID = UserId;
+            this.UserName = userName;
+            this.Password = Password;
+            this.IsActive = isActive;
+        }
     }
 }

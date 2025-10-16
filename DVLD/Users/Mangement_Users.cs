@@ -1,4 +1,5 @@
-﻿using DVLD_Buisness;
+﻿using DVLD.People.Controls;
+using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -126,8 +127,67 @@ namespace DVLD.Users
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            infoPearson.personID = 0;
+            infoPearson.CurrentID = "0";
+            infoPersonWithFilter.CurrentMode = infoPersonWithFilter.mode.Add;
             Form frm = new Add_Edit_User();
+            frm.Show();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = clsUser.GetAllUsers();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure to delete this User ?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                if(clsUser.DoPersonIdConnectecedToUser(Convert.ToInt32( dataGridView1.CurrentRow.Cells["UserID"].Value.ToString())))
+                {
+                    MessageBox.Show("This Person Connected to User , You can't delete this User ","Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("User Deleted Successfully ");
+                }
+            }
+        }
+
+        private  void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoPersonWithFilter.CurrentMode = infoPersonWithFilter.mode.Update;
+            infoPearson.personID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString());
+            infoPearson.CurrentID = dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString();
+            Form frm = new Add_Edit_User();
+            frm.Show();
+        }
+
+        private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoPearson.personID = 0;
+            infoPearson.CurrentID = "0";
+            infoPersonWithFilter.CurrentMode = infoPersonWithFilter.mode.Add;
+            Form frm = new Add_Edit_User();
+            frm.Show();
+        }
+
+        private void showDetailesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoPearson.mode = infoPearson.Mode.ShowDetailes;   
+            infoPearson.personID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString());
+            infoPearson.CurrentID = dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString();
+            Form frm = new show_Detailes_User();
+            frm.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoPearson.mode = infoPearson.Mode.ShowDetailes;
+            infoPearson.personID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString());
+            infoPearson.CurrentID = dataGridView1.CurrentRow.Cells["PersonID"].Value.ToString();
+            Form frm = new Change_Password();
             frm.Show();
         }
     }

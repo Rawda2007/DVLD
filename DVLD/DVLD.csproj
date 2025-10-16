@@ -92,11 +92,29 @@
     <Compile Include="Users\Add_Edit_User.Designer.cs">
       <DependentUpon>Add_Edit_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\Change_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Change_Password.Designer.cs">
+      <DependentUpon>Change_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Controls\infoUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\infoUser.Designer.cs">
+      <DependentUpon>infoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\Mangement_Users.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Users\Mangement_Users.Designer.cs">
       <DependentUpon>Mangement_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\show_Detailes_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\show_Detailes_User.Designer.cs">
+      <DependentUpon>show_Detailes_User.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -129,8 +147,17 @@
     <EmbeddedResource Include="Users\Add_Edit_User.resx">
       <DependentUpon>Add_Edit_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users\Change_Password.resx">
+      <DependentUpon>Change_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Controls\infoUser.resx">
+      <DependentUpon>infoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\Mangement_Users.resx">
       <DependentUpon>Mangement_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\show_Detailes_User.resx">
+      <DependentUpon>show_Detailes_User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,6 +313,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bookmark %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktops1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

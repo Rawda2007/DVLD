@@ -36,5 +36,26 @@ namespace DVLD_Buisness
             return clsUsers.DoPersonIdConnectecedToUser(personid);
         }
 
+        public static bool DoUserConnectAppplicaton(int UserID)
+        {       
+            return clsUsers.DoUserConnectAppplicaton(UserID);
+        }
+        public static User GetUserByPersonID(int PersonID)
+        {
+            return clsUsers.GetUserByPersonID(PersonID);
+
+        }
+        public static bool UpdateUser(User entity)
+        {
+            return clsUsers.UpdateUser(entity);
+        }
+        public static bool ChangePassword(int PersonID, string OldPassword, string NewPassword)
+        {
+            return clsUsers.ChangePassword(PersonID, OldPassword, NewPassword);
+        }
+  public static int PersonIDByUserName(string UserName)
+        {
+                       return clsUsers.PersonIDByUserName(UserName);
+        }
     }
 }

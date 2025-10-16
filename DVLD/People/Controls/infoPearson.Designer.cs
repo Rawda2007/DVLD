@@ -105,7 +105,7 @@
             this.groupBox1.Controls.Add(this.labelName);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.GreenYellow;
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(907, 414);
             this.groupBox1.TabIndex = 0;
@@ -283,9 +283,9 @@
             // tNational
             // 
             this.tNational.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tNational.Location = new System.Drawing.Point(128, 154);
+            this.tNational.Location = new System.Drawing.Point(150, 154);
             this.tNational.Name = "tNational";
-            this.tNational.Size = new System.Drawing.Size(148, 35);
+            this.tNational.Size = new System.Drawing.Size(126, 35);
             this.tNational.TabIndex = 50;
             this.tNational.TextChanged += new System.EventHandler(this.tNational_TextChanged);
             this.tNational.Validating += new System.ComponentModel.CancelEventHandler(this.tNational_Validating);
@@ -414,12 +414,13 @@
             // 
             this.National.AutoSize = true;
             this.National.ForeColor = System.Drawing.Color.LightGreen;
-            this.National.Location = new System.Drawing.Point(-3, 151);
+            this.National.Location = new System.Drawing.Point(6, 161);
             this.National.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.National.Name = "National";
-            this.National.Size = new System.Drawing.Size(150, 28);
+            this.National.Size = new System.Drawing.Size(143, 28);
             this.National.TabIndex = 37;
-            this.National.Text = " National No :";
+            this.National.Text = "National No :";
+            this.National.Click += new System.EventHandler(this.National_Click);
             // 
             // Gendor
             // 
@@ -476,7 +477,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupBox1);
             this.Name = "infoPearson";
-            this.Size = new System.Drawing.Size(931, 434);
+            this.Size = new System.Drawing.Size(925, 424);
             this.Load += new System.EventHandler(this.infoPearson_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
