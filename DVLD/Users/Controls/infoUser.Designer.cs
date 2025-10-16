@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.infoPearson1 = new DVLD.People.Controls.infoPearson();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UserName = new System.Windows.Forms.TextBox();
             this.Active = new System.Windows.Forms.TextBox();
@@ -36,17 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.infoPearson1 = new DVLD.People.Controls.infoPearson();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // infoPearson1
-            // 
-            this.infoPearson1.BackColor = System.Drawing.Color.White;
-            this.infoPearson1.Location = new System.Drawing.Point(0, 0);
-            this.infoPearson1.Name = "infoPearson1";
-            this.infoPearson1.Size = new System.Drawing.Size(931, 434);
-            this.infoPearson1.TabIndex = 0;
-            this.infoPearson1.Load += new System.EventHandler(this.infoPearson1_Load);
             // 
             // groupBox1
             // 
@@ -59,7 +50,7 @@
             this.groupBox1.Controls.Add(this.UserName);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.GreenYellow;
-            this.groupBox1.Location = new System.Drawing.Point(28, 431);
+            this.groupBox1.Location = new System.Drawing.Point(34, 440);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(827, 89);
             this.groupBox1.TabIndex = 1;
@@ -112,9 +103,9 @@
             this.label2.ForeColor = System.Drawing.Color.LightGreen;
             this.label2.Location = new System.Drawing.Point(15, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 28);
+            this.label2.Size = new System.Drawing.Size(107, 28);
             this.label2.TabIndex = 6;
-            this.label2.Text = "User ID";
+            this.label2.Text = "Password";
             // 
             // label3
             // 
@@ -126,6 +117,15 @@
             this.label3.Size = new System.Drawing.Size(73, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "Active";
+            // 
+            // infoPearson1
+            // 
+            this.infoPearson1.BackColor = System.Drawing.Color.White;
+            this.infoPearson1.Location = new System.Drawing.Point(-4, -9);
+            this.infoPearson1.Name = "infoPearson1";
+            this.infoPearson1.Size = new System.Drawing.Size(931, 434);
+            this.infoPearson1.TabIndex = 0;
+            this.infoPearson1.Load += new System.EventHandler(this.infoPearson1_Load);
             // 
             // infoUser
             // 
@@ -144,8 +144,6 @@
         }
 
         #endregion
-
-        private People.Controls.infoPearson infoPearson1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox UserID;
         private System.Windows.Forms.TextBox Active;
@@ -153,5 +151,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private People.Controls.infoPearson infoPearson1;
     }
 }

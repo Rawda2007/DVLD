@@ -123,6 +123,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap application {
+            get {
+                object obj = ResourceManager.GetObject("application", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Application_Types_512 {
             get {
                 object obj = ResourceManager.GetObject("Application Types 512", resourceCulture);
@@ -176,6 +186,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap close1 {
             get {
                 object obj = ResourceManager.GetObject("close1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close2 {
+            get {
+                object obj = ResourceManager.GetObject("close2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +483,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap refresh1 {
+            get {
+                object obj = ResourceManager.GetObject("refresh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap right_arrow {
             get {
                 object obj = ResourceManager.GetObject("right-arrow", resourceCulture);
@@ -543,6 +573,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap test {
+            get {
+                object obj = ResourceManager.GetObject("test", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_data {
             get {
                 object obj = ResourceManager.GetObject("user-data", resourceCulture);
@@ -576,6 +616,26 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap write {
             get {
                 object obj = ResourceManager.GetObject("write", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap write1 {
+            get {
+                object obj = ResourceManager.GetObject("write1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap write2 {
+            get {
+                object obj = ResourceManager.GetObject("write2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

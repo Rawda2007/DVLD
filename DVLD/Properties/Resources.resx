@@ -130,6 +130,9 @@
   <data name="log-in (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log-in (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,9 +163,6 @@
   <data name="identification-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\identification-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add-contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="password (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +180,9 @@
   </data>
   <data name="desktops1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\desktops1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="closed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,11 +205,8 @@
   <data name="new-hire4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new-hire4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log-in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new-hire1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new-hire1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pexels-thekameragrapher-33419683" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-thekameragrapher-33419683.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -216,6 +216,12 @@
   </data>
   <data name="web-security" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web-security.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new-hire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-hire2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="write2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\write2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WallPaper2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WallPaper2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +241,17 @@
   <data name="closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="write1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\write1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="right-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="application" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,13 +283,16 @@
   <data name="driving" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\driving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new-hire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new-hire2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="log-in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Next 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new-hire1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-hire1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

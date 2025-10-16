@@ -1,4 +1,5 @@
-﻿using DVLD.People;
+﻿using DVLD.Application_Types;
+using DVLD.People;
 using DVLD.People.Controls;
 using DVLD.Users;
 using DVLD_Buisness;
@@ -72,6 +73,19 @@ namespace DVLD.Main
             clsGlobal.NotRemmberUserNameAndPassword();
             this.Close();
 
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Form frm = new Test_Types.Test_Types();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form frm = new Mangement_Application_Types();
+            frm.ShowDialog();
 
         }
     }
