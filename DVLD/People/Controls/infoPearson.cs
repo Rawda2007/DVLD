@@ -257,5 +257,15 @@ namespace DVLD.People.Controls
         {
 
         }
+
+        private void tPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

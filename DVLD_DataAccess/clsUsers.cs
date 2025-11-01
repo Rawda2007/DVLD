@@ -78,6 +78,7 @@ namespace DVLD_DataAccess
                                 Convert.ToInt32(reader[2])
                             );
                         }
+                        reader.Close();
                     }
                 }
                 return entity;
@@ -106,6 +107,7 @@ namespace DVLD_DataAccess
                                     Convert.ToInt32(reader[3])
                             );
                         }
+                        reader.Close();
                     }
                 }
                 return entity;
@@ -259,6 +261,49 @@ namespace DVLD_DataAccess
             }
             return personID;
         }
+        public static int GetUserIDByUserName(string UserName)
+        { 
+            int userID = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+                {
+                    connection.Open();
+                    string query = "select UserID from Users where UserName=@UserName";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@UserName", UserName);
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        userID = Convert.ToInt32(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return userID;
+        }
 
+        public static int GetPersonIDByUserID(int UserID)
+        {
+            using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                connection.Open();
+                string query = "select PersonID from Users where UserID=@UserID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserID", UserID);
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt32(result);
+                }
+                else
+                {
+                    return 0; // أو أي قيمة افتراضية أخرى تشير إلى عدم العثور على الشخص
+                }
+            }
+        }
     }
 }

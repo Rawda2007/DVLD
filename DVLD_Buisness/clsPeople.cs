@@ -47,5 +47,10 @@ namespace DVLD_Buisness
         {
            return clsPeoples.IsExist(personID);
         }
+        public static string GetNationalByPersonID(int personID)
+
+        {
+            return clsPeoples.GetNationalByPersonID(personID);
+        }
     }
 }

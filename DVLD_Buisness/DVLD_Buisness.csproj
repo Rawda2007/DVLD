@@ -46,9 +46,12 @@
     <Compile Include="clsAppliction_Type.cs" />
     <Compile Include="Buisness.cs" />
     <Compile Include="clsCountry.cs" />
+    <Compile Include="clsDriver.cs" />
+    <Compile Include="clsLicense.cs" />
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsTestType.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="clsLocalDrivingLicenseApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -66,5 +66,20 @@ namespace DVLD.Test_Types
                 Save.Enabled = false;
             }
         }
+
+        private void NewFees_StyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewFees_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //IsDigit only
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

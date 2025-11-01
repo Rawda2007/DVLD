@@ -51,6 +51,8 @@
             this.NewFees.Size = new System.Drawing.Size(100, 29);
             this.NewFees.TabIndex = 87;
             this.NewFees.TextChanged += new System.EventHandler(this.NewFees_TextChanged);
+            this.NewFees.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NewFees_KeyPress);
+            this.NewFees.StyleChanged += new System.EventHandler(this.NewFees_StyleChanged);
             // 
             // label5
             // 

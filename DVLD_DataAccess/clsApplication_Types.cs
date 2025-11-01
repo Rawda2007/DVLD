@@ -25,6 +25,7 @@ namespace DVLD_DataAccess
                     {
                         DataTable dataTable = new DataTable();
                         dataTable.Load(reader);
+                        reader.Close();
                         return dataTable;
                     }
                     else
@@ -54,6 +55,7 @@ namespace DVLD_DataAccess
                     {
                         DataTable dataTable = new DataTable();
                         dataTable.Load(reader);
+                        reader.Close();
                         return dataTable;
                     }
                     else
@@ -90,6 +92,19 @@ namespace DVLD_DataAccess
                 return false;
             }
         }
-
+        public static int FeesTypeByTypeID(int TypeID)
+        {
+            int FeesType = 0;
+            using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                connection.Open();
+                string Query = @"select ApplicationFees from ApplicationTypes
+                                 where ApplicationTypeID=@TypeID ";
+                SqlCommand command = new SqlCommand(Query, connection);
+                command.Parameters.AddWithValue("@TypeID", TypeID);
+                FeesType=Convert.ToInt32(command.ExecuteScalar());
+            }
+            return FeesType;
+            }
     }
 }

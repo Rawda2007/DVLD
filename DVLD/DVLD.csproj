@@ -58,8 +58,74 @@
     <Compile Include="Application_Types\Mangement_Application_Types.Designer.cs">
       <DependentUpon>Mangement_Application_Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Drivers\MainDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drivers\MainDrivers.Designer.cs">
+      <DependentUpon>MainDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\clsGlobal.cs" />
     <Compile Include="Global\clsVaildation.cs" />
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoDrivingLicenseApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoDrivingLicenseApp.Designer.cs">
+      <DependentUpon>infoDrivingLicenseApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoShowLicense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoShowLicense.Designer.cs">
+      <DependentUpon>infoShowLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Control\infoTest.Designer.cs">
+      <DependentUpon>infoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\IssueDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\IssueDriver.Designer.cs">
+      <DependentUpon>IssueDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\LocalDriving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\LocalDriving.Designer.cs">
+      <DependentUpon>LocalDriving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\NewLocalDrivingLincese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\NewLocalDrivingLincese.Designer.cs">
+      <DependentUpon>NewLocalDrivingLincese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\ScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\ScheduleTest.Designer.cs">
+      <DependentUpon>ScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Show License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Show License.Designer.cs">
+      <DependentUpon>Show License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\TakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\TakeTest.Designer.cs">
+      <DependentUpon>TakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +211,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application_Types\Mangement_Application_Types.resx">
       <DependentUpon>Mangement_Application_Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drivers\MainDrivers.resx">
+      <DependentUpon>MainDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Control\infoDrivingLicenseApp.resx">
+      <DependentUpon>infoDrivingLicenseApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Control\infoShowLicense.resx">
+      <DependentUpon>infoShowLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Control\infoTest.resx">
+      <DependentUpon>infoTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\IssueDriver.resx">
+      <DependentUpon>IssueDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\LocalDriving.resx">
+      <DependentUpon>LocalDriving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\NewLocalDrivingLincese.resx">
+      <DependentUpon>NewLocalDrivingLincese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\ScheduleTest.resx">
+      <DependentUpon>ScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Show License.resx">
+      <DependentUpon>Show License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\TakeTest.resx">
+      <DependentUpon>TakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -394,6 +493,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktops2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optometry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optometry1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver-license.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

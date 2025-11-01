@@ -23,6 +23,7 @@ namespace DVLD_DataAccess
                 {
                     DataTable dataTable = new DataTable();
                     dataTable.Load(reader);
+                    reader.Close();
                     return dataTable;
                 }
                 else
@@ -59,6 +60,7 @@ namespace DVLD_DataAccess
                 {
                     DataTable dataTable = new DataTable();
                     dataTable.Load(reader);
+                    reader.Close();
                     return dataTable;
                 }
                 else

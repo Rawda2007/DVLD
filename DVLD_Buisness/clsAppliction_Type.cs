@@ -23,5 +23,9 @@ using DVLD_DataAccess;
 
     }
 
+    public static int FeesTypeByTypeID(int TypeID)
+    {
+        return clsApplication_Types.FeesTypeByTypeID(TypeID);
+    }
     }
 

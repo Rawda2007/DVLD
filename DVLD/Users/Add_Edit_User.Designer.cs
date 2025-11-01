@@ -87,7 +87,7 @@
             // infoPersonWithFilter1
             // 
             this.infoPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.infoPersonWithFilter1.Location = new System.Drawing.Point(3, 0);
+            this.infoPersonWithFilter1.Location = new System.Drawing.Point(0, 3);
             this.infoPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.infoPersonWithFilter1.Name = "infoPersonWithFilter1";
             this.infoPersonWithFilter1.Size = new System.Drawing.Size(1200, 629);

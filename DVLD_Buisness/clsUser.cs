@@ -57,5 +57,9 @@ namespace DVLD_Buisness
         {
                        return clsUsers.PersonIDByUserName(UserName);
         }
+        public static int GetUserIDByUserName(string UserName)
+        {
+            return clsUsers.GetUserIDByUserName(UserName);
+        }
     }
 }

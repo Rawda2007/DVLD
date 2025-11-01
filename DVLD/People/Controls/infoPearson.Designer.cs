@@ -37,6 +37,7 @@
             this.Save = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
             this.linkSet = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tPhone = new System.Windows.Forms.TextBox();
             this.rFemale = new System.Windows.Forms.RadioButton();
             this.rMale = new System.Windows.Forms.RadioButton();
@@ -62,10 +63,9 @@
             this.Email = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -206,6 +206,17 @@
             this.linkSet.Text = "SetImage";
             this.linkSet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSet_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.id_card__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(711, 192);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
             // tPhone
             // 
             this.tPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -213,6 +224,8 @@
             this.tPhone.Name = "tPhone";
             this.tPhone.Size = new System.Drawing.Size(200, 35);
             this.tPhone.TabIndex = 57;
+            this.tPhone.TextChanged += new System.EventHandler(this.tPhone_TextChanged);
+            this.tPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tPhone_KeyPress);
             // 
             // rFemale
             // 
@@ -459,17 +472,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.id_card__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(711, 192);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
             // infoPearson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -481,8 +483,8 @@
             this.Load += new System.EventHandler(this.infoPearson_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

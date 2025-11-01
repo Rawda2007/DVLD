@@ -310,5 +310,30 @@ namespace DVLD_DataAccess
             }
             return count > 0;
         }
+
+       public static string GetNationalByPersonID(int personID)
+        {
+            string national = string.Empty;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+                {
+                    connection.Open();
+                    string Query = "SELECT NationalNo FROM People WHERE PersonID=@PersonID";
+                    SqlCommand command = new SqlCommand(Query, connection);
+                    command.Parameters.AddWithValue("@PersonID", personID);
+                    var result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        national = result.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine((ex.Message));
+            }
+            return national;
+        }
     }
 }

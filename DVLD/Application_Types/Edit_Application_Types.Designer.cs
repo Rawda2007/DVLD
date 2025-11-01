@@ -162,6 +162,7 @@
             this.NewFees.Size = new System.Drawing.Size(100, 29);
             this.NewFees.TabIndex = 76;
             this.NewFees.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.NewFees.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NewFees_KeyPress);
             // 
             // Edit_Application_Types
             // 

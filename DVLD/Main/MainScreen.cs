@@ -1,4 +1,6 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Drivers;
+using DVLD.LocalDrivingLicenseApplications_View;
 using DVLD.People;
 using DVLD.People.Controls;
 using DVLD.Users;
@@ -87,6 +89,24 @@ namespace DVLD.Main
             Form frm = new Mangement_Application_Types();
             frm.ShowDialog();
 
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new NewLocalDrivingLincese();
+            frm.Show();
+        }
+
+        private void localToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new LocalDriving();
+            frm.ShowDialog();
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new MainDrivers();
+            frm.ShowDialog();
         }
     }
 }

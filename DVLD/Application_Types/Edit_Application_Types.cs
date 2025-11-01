@@ -63,5 +63,13 @@ namespace DVLD.Application_Types
                 MessageBox.Show("Error in Changing Fees");
             }
         }
+
+        private void NewFees_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
