@@ -20,6 +20,14 @@ namespace DVLD.People.Controls
             InitializeComponent();
             FormUpdateUser(); 
        }
+        //public infoPersonWithFilter(int personID)
+        //{
+        //    InitializeComponent();
+        //    infoPearson.mode = infoPearson.Mode.ShowDetailes;
+        //    infoPearson.CurrentID = personID.ToString();
+        //    infoPearson.personID = personID;
+        //    infoPearson1.GetPerson();
+        //}
 
         private void infoPersonWithFilter_Load(object sender, EventArgs e)
         {

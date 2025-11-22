@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DVLD_Buisness;
 using DVLD_DataAccess;
 
     public class clsAppliction_Type
@@ -17,15 +18,20 @@ using DVLD_DataAccess;
         {
             return clsApplication_Types.GetApplicationByID(ID);
         }
-    public static bool ChangeFees(int ID, decimal fees)
-    {
-     return clsApplication_Types. ChangeFees(ID, fees);
+        public static bool ChangeFees(int ID, decimal fees)
+        {
+         return clsApplication_Types. ChangeFees(ID, fees);
+
+        }
+
+        public static int FeesTypeByTypeID(int TypeID)
+        {
+            return clsApplication_Types.FeesTypeByTypeID(TypeID);
+        }
 
     }
 
-    public static int FeesTypeByTypeID(int TypeID)
-    {
-        return clsApplication_Types.FeesTypeByTypeID(TypeID);
-    }
-    }
+
+
+  
 

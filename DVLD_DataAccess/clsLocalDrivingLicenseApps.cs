@@ -528,5 +528,48 @@ select SCOPE_IDENTITY();";
             }
             return LicenseID;
         }
+        public static bool IsExist(int LicenseID)
+        {
+            int Effects = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                connection.Open();
+                string Query = @"  select count(*) from Licenses
+  where LicenseID=@ID";
+                SqlCommand command = new SqlCommand(Query, connection);
+                command.Parameters.AddWithValue("@ID", LicenseID);
+                Effects = Convert.ToInt32(command.ExecuteScalar());
+
+
+            }
+            if (Effects == 0) return false;
+            return true;
+        }
+
+        public static DataTable GetDataLicenseToHistoryLicense(int PersonID)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                conn.Open();
+                string Query = @"select [Licenses].LicenseID,[Licenses].ApplicationID as AppID,
+                    LicenseClasses.ClassName,[Licenses].IssueDate,[Licenses].ExpirationDate,[Licenses].IsActive
+                    from [Licenses] inner join LicenseClasses 
+                    on LicenseClasses.LicenseClassID=[Licenses].LicenseClass
+                    inner join Applications on Applications.ApplicationID=[Licenses].ApplicationID
+                    where Applications.ApplicantPersonID=@PersonID";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.AddWithValue("@PersonID", PersonID);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+                reader.Close();
+                return dt;
+            }
+        }
     }
 }

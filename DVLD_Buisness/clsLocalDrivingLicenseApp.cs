@@ -129,6 +129,16 @@ namespace DVLD_Buisness
             //Values(@ApplicationID, @DriverID, @LicenseClass, @IssueDate, @ExpirationDate, @Notes, @PaidFees, @IssueReason, @CreatedByUserID)
             return clsLocalDrivingLicenseApps.IssueDrivingLicense(AppID, DriverID, LicenseClassID, IssueDate, ExpirationDate, Notes, PaidFees, 1, UserID);
         }
+        public static bool IsExist(int LicenseID)
+        {
+            return clsLocalDrivingLicenseApps.IsExist(LicenseID);
+        }
 
+        public static DataTable GetDataLicenseToHistoryLicense(int PersonID)
+
+        {
+            return clsLocalDrivingLicenseApps.GetDataLicenseToHistoryLicense(PersonID);
+        }
     }
+
 }

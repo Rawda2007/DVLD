@@ -66,6 +66,24 @@
     </Compile>
     <Compile Include="Global\clsGlobal.cs" />
     <Compile Include="Global\clsVaildation.cs" />
+    <Compile Include="International_License\International_License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International_License\International_License.Designer.cs">
+      <DependentUpon>International_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International_License\New_International_License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International_License\New_International_License.Designer.cs">
+      <DependentUpon>New_International_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International_License\ShowLicenseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International_License\ShowLicenseDetails.Designer.cs">
+      <DependentUpon>ShowLicenseDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalDrivingLicenseApplications_View\Control\infoDrivingLicenseApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +131,12 @@
     </Compile>
     <Compile Include="LocalDrivingLicenseApplications_View\Show License.Designer.cs">
       <DependentUpon>Show License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\ShowLicenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDrivingLicenseApplications_View\ShowLicenseHistory.Designer.cs">
+      <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalDrivingLicenseApplications_View\TakeTest.cs">
       <SubType>Form</SubType>
@@ -215,6 +239,15 @@
     <EmbeddedResource Include="Drivers\MainDrivers.resx">
       <DependentUpon>MainDrivers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="International_License\International_License.resx">
+      <DependentUpon>International_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International_License\New_International_License.resx">
+      <DependentUpon>New_International_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International_License\ShowLicenseDetails.resx">
+      <DependentUpon>ShowLicenseDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Control\infoDrivingLicenseApp.resx">
       <DependentUpon>infoDrivingLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LocalDrivingLicenseApplications_View\Show License.resx">
       <DependentUpon>Show License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDrivingLicenseApplications_View\ShowLicenseHistory.resx">
+      <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalDrivingLicenseApplications_View\TakeTest.resx">
       <DependentUpon>TakeTest.cs</DependentUpon>
@@ -508,6 +544,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\driver-license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver-license1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="International_License\Control\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

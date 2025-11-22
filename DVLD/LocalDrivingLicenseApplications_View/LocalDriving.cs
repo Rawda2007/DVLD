@@ -262,5 +262,11 @@ namespace DVLD.LocalDrivingLicenseApplications_View
             Form frm = new Show_License();
             frm.ShowDialog();
         }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            Form form = new ShowLicenseHistory(clsPeople.GetPersonIDByNational(dataGridView2.CurrentRow.Cells[2].Value.ToString()));
+            form.Show();
+        }
     }
 }

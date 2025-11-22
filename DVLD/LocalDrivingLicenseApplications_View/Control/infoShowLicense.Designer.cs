@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.IsActive = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.Label();
             this.Reason = new System.Windows.Forms.Label();
             this.FName = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.National = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IsActive = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Driver License info";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // IsActive
+            // 
+            this.IsActive.AutoSize = true;
+            this.IsActive.Location = new System.Drawing.Point(552, 163);
+            this.IsActive.Name = "IsActive";
+            this.IsActive.Size = new System.Drawing.Size(56, 22);
+            this.IsActive.TabIndex = 16;
+            this.IsActive.Text = "label4";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(415, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "IsActive :";
             // 
             // Notes
             // 
@@ -146,7 +166,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(14, 117);
+            this.label6.Location = new System.Drawing.Point(25, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 22);
             this.label6.TabIndex = 2;
@@ -222,31 +242,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(32, 40);
+            this.label4.Location = new System.Drawing.Point(25, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 22);
             this.label4.TabIndex = 1;
             this.label4.Text = "Class :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(415, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 22);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "IsActive :";
-            // 
-            // IsActive
-            // 
-            this.IsActive.AutoSize = true;
-            this.IsActive.Location = new System.Drawing.Point(552, 163);
-            this.IsActive.Name = "IsActive";
-            this.IsActive.Size = new System.Drawing.Size(56, 22);
-            this.IsActive.TabIndex = 16;
-            this.IsActive.Text = "label4";
             // 
             // infoShowLicense
             // 

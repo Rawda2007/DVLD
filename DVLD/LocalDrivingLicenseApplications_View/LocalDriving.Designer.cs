@@ -92,7 +92,7 @@
             this.toolStripSeparator1,
             this.refrashToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(321, 280);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(321, 308);
             // 
             // toolStripMenuItem1
             // 
@@ -184,6 +184,7 @@
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(320, 30);
             this.toolStripMenuItem10.Text = "Show Person License History";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripSeparator1
             // 

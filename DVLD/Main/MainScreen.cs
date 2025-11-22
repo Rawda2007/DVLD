@@ -108,5 +108,17 @@ namespace DVLD.Main
             Form frm = new MainDrivers();
             frm.ShowDialog();
         }
+
+        private void internationalLieceseApplToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new DVLD.International_License.International_License();
+            form.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new International_License.New_International_License();
+            frm.ShowDialog();
+        }
     }
 }

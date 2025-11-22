@@ -25,25 +25,29 @@ namespace DVLD.LocalDrivingLicenseApplications_View.Control
            
       if(DesignMode)
                 return;
-             int LicenceID = clsLicense.GetLicenseIDByNational(NationalNo, ClassName);
-            DataTable dt = clsLicense.GetInfoLicenseByLicenseID(25);
-            if (dt.Rows.Count>0)
-            {
-                LID.Text = dt.Rows[0]["LicenseID"].ToString();
-                string ClassName= clsLicense.GetClassNameByClassID(Convert.ToInt32( dt.Rows[0]["LicenseClass"]));
-                NClass.Text = ClassName;
-                FName.Text = FullName;
-                Notes.Text = dt.Rows[0]["Notes"].ToString();
-                IssueDate.Text = Convert.ToDateTime( dt.Rows[0]["IssueDate"]).ToString("yyyy-MM-dd");
-                exDate.Text = Convert.ToDateTime(dt.Rows[0]["ExpirationDate"]).ToString("yyyy-MM-dd");
-                Reason.Text = dt.Rows[0]["IssueReason"].ToString();
-                IsActive.Text = Convert.ToBoolean(dt.Rows[0]["IsActive"]) ? "Active" : "Inactive";
-            }
+            DateLicense();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+        public void DateLicense()
+        {
+            int LicenceID = clsLicense.GetLicenseIDByNational(NationalNo, ClassName);
+            DataTable dt = clsLicense.GetInfoLicenseByLicenseID(25);
+            if (dt.Rows.Count > 0)
+            {
+                LID.Text = dt.Rows[0]["LicenseID"].ToString();
+                string ClassName = clsLicense.GetClassNameByClassID(Convert.ToInt32(dt.Rows[0]["LicenseClass"]));
+                NClass.Text = ClassName;
+                FName.Text = FullName;
+                Notes.Text = dt.Rows[0]["Notes"].ToString();
+                IssueDate.Text = Convert.ToDateTime(dt.Rows[0]["IssueDate"]).ToString("yyyy-MM-dd");
+                exDate.Text = Convert.ToDateTime(dt.Rows[0]["ExpirationDate"]).ToString("yyyy-MM-dd");
+                Reason.Text = dt.Rows[0]["IssueReason"].ToString();
+                IsActive.Text = Convert.ToBoolean(dt.Rows[0]["IsActive"]) ? "Active" : "Inactive";
+            }
         }
     }
 }
