@@ -106,9 +106,45 @@ namespace DVLD_DataAccess
                 SqlCommand cmd = new SqlCommand(Query, conn);
                 cmd.Parameters.AddWithValue("@ClassID", ClassID);
                 cmd.Parameters.AddWithValue("@National", National);
-                LicenseID=Convert.ToInt32(cmd.ExecuteScalar());
+                LicenseID = Convert.ToInt32(cmd.ExecuteScalar());
             }
             return LicenseID;
+        }
+
+        public static int GetFeesClassByClassID(int ClassID)
+        {
+            int Fees = 0;
+            using (SqlConnection conn = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                conn.Open();
+                string Query = @"   select ClassFees from LicenseClasses
+  where LicenseClassID=@ClassID";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.AddWithValue("@ClassID", ClassID);
+                Fees = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            return Fees;
+        }
+
+        public static bool changeActiveLicenseToNonActive(int LicenseID)
+        {
+            bool IsDone = false;
+            using (SqlConnection conn = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                conn.Open();
+                string Query = @"    update Licenses
+  set IsActive=0
+  where LicenseID=@LicenseID";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.AddWithValue("@LicenseID", LicenseID);
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    IsDone = true;
+                }
+            }
+            return IsDone;
+
         }
     }
 }

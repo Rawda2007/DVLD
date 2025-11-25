@@ -23,5 +23,15 @@ namespace DVLD_Buisness
             int ClassID=clsLicenses.GetClassIDByNameClassLicense(ClassName);
             return clsLicenses.GetLicenseIDByNational(National, ClassID);
         }
+        public static int GetFeesClassByClassID(int ClassID)
+        {
+            return clsLicenses.GetFeesClassByClassID(ClassID);
+        }
+
+        public static bool changeActiveLicenseToNonActive(int LicenseID)
+
+        {
+            return clsLicenses.changeActiveLicenseToNonActive(LicenseID);
+        }
     }
 }

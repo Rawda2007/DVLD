@@ -82,5 +82,15 @@ namespace DVLD.LocalDrivingLicenseApplications_View
             Save .Enabled = false;
 
         }
+
+        private void TClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

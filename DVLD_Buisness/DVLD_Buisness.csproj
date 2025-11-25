@@ -51,6 +51,7 @@
     <Compile Include="clsInternationalLicense.cs" />
     <Compile Include="clsLicense.cs" />
     <Compile Include="clsPeople.cs" />
+    <Compile Include="clsRenewLicenses.cs" />
     <Compile Include="clsTestType.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsLocalDrivingLicenseApp.cs" />

@@ -120,5 +120,22 @@ namespace DVLD.Main
             Form frm = new International_License.New_International_License();
             frm.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void renameDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm=new Renew_License.Renew_License_Application();
+            frm.ShowDialog();
+        }
+
+        private void replacementForLostOrDamagedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm =new Replacement_For_Damaged_Lost();
+            frm.ShowDialog();
+        }
     }
 }

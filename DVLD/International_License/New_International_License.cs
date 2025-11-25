@@ -74,6 +74,12 @@ namespace DVLD.International_License
                     Issue.Enabled = true;
 
                 }
+                if (IsActive.Text == "Inactive")
+                {
+                    MessageBox.Show("This License is  Inactive .", "Not allow", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Issue.Enabled = false;
+                    return;
+                }
             }
             else
             {
@@ -142,6 +148,10 @@ namespace DVLD.International_License
                 AppID.Text = ApplicationID.ToString();
                 IID.Text = InternationalID.ToString();
                LicenseID.Text= LID.Text  ;
+                Issue.Enabled = false;
+                Filter.Enabled = false;
+                SearchPerson.Enabled = false;
+
             }
         }
     }

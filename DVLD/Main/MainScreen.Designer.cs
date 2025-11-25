@@ -170,6 +170,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(356, 36);
             this.toolStripMenuItem1.Text = "Driving Lincenses Services";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // newDrivingLicenseToolStripMenuItem
             // 
@@ -201,7 +202,8 @@
             this.renameDrivingLicenseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renameDrivingLicenseToolStripMenuItem.Name = "renameDrivingLicenseToolStripMenuItem";
             this.renameDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(465, 32);
-            this.renameDrivingLicenseToolStripMenuItem.Text = "Rename Driving License";
+            this.renameDrivingLicenseToolStripMenuItem.Text = "Renew Driving License";
+            this.renameDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renameDrivingLicenseToolStripMenuItem_Click);
             // 
             // replacementForLostOrDamagedLicenseToolStripMenuItem
             // 
@@ -209,6 +211,7 @@
             this.replacementForLostOrDamagedLicenseToolStripMenuItem.Name = "replacementForLostOrDamagedLicenseToolStripMenuItem";
             this.replacementForLostOrDamagedLicenseToolStripMenuItem.Size = new System.Drawing.Size(465, 32);
             this.replacementForLostOrDamagedLicenseToolStripMenuItem.Text = "Replacement for Lost or Damaged License";
+            this.replacementForLostOrDamagedLicenseToolStripMenuItem.Click += new System.EventHandler(this.replacementForLostOrDamagedLicenseToolStripMenuItem_Click);
             // 
             // releaseDetainedDrivingLicenseToolStripMenuItem
             // 

@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.infoPersonWithFilter1 = new DVLD.People.Controls.infoPersonWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.AppFees = new System.Windows.Forms.Label();
             this.TClass = new System.Windows.Forms.ComboBox();
@@ -42,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.infoPersonWithFilter1 = new DVLD.People.Controls.infoPersonWithFilter();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
@@ -73,15 +73,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personal Information";
             // 
-            // infoPersonWithFilter1
-            // 
-            this.infoPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.infoPersonWithFilter1.Location = new System.Drawing.Point(3, 0);
-            this.infoPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.infoPersonWithFilter1.Name = "infoPersonWithFilter1";
-            this.infoPersonWithFilter1.Size = new System.Drawing.Size(1200, 629);
-            this.infoPersonWithFilter1.TabIndex = 3;
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
@@ -102,6 +93,7 @@
             this.tabPage2.Size = new System.Drawing.Size(1203, 614);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Application Information";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // AppFees
             // 
@@ -121,6 +113,7 @@
             this.TClass.Name = "TClass";
             this.TClass.Size = new System.Drawing.Size(312, 26);
             this.TClass.TabIndex = 20;
+            this.TClass.SelectedIndexChanged += new System.EventHandler(this.TClass_SelectedIndexChanged);
             // 
             // AppDate
             // 
@@ -210,6 +203,15 @@
             this.label2.Size = new System.Drawing.Size(184, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "D.L.Application ID :";
+            // 
+            // infoPersonWithFilter1
+            // 
+            this.infoPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.infoPersonWithFilter1.Location = new System.Drawing.Point(3, 0);
+            this.infoPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.infoPersonWithFilter1.Name = "infoPersonWithFilter1";
+            this.infoPersonWithFilter1.Size = new System.Drawing.Size(1200, 629);
+            this.infoPersonWithFilter1.TabIndex = 3;
             // 
             // button3
             // 

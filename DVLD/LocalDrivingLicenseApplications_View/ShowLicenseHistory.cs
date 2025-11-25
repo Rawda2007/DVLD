@@ -27,8 +27,8 @@ namespace DVLD.LocalDrivingLicenseApplications_View
             dataGridView1.Columns[4].Width = 170;
 
             dataGridView2.DataSource = clsInternationalLicense.GetDataInternationalToHistoryLicense(PersonID);
-            dataGridView2.Columns[3].Width = 170;
-            dataGridView2.Columns[4].Width = 170;
+            //dataGridView2.Columns[3].Width = 170;
+            //dataGridView2.Columns[4].Width = 170;
 
         }
 
