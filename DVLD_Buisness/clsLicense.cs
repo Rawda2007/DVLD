@@ -33,5 +33,11 @@ namespace DVLD_Buisness
         {
             return clsLicenses.changeActiveLicenseToNonActive(LicenseID);
         }
+        public static int GetPersonIDByLicensesID(int LicenseID)
+
+        {
+            return clsLicenses.GetPersonIDByLicensesID(LicenseID);
+        }
+        
     }
 }

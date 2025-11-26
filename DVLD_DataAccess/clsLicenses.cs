@@ -146,5 +146,22 @@ namespace DVLD_DataAccess
             return IsDone;
 
         }
+        public static int GetPersonIDByLicensesID(int LicenseID)
+        {
+            int PersonID = 1;
+            using (SqlConnection conn = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                conn.Open();
+                string Query = @"  select Applications.ApplicantPersonID from Applications
+                  inner join Licenses on Licenses.ApplicationID=Applications.ApplicationID
+                  where Licenses.LicenseID=@licenseID";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.AddWithValue("@licenseID", LicenseID);
+                 PersonID =Convert.ToInt32( cmd.ExecuteScalar());
+
+            }
+            return PersonID;
+
+        }
     }
 }

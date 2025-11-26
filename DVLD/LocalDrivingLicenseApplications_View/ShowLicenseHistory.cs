@@ -23,8 +23,8 @@ namespace DVLD.LocalDrivingLicenseApplications_View
             infoPearson.CurrentID = personID.ToString();
             infoPearson.personID = personID;
             dataGridView1.DataSource = clsLocalDrivingLicenseApp.GetDataLicenseToHistoryLicense(PersonID);
-            dataGridView1.Columns[3].Width = 170;
-            dataGridView1.Columns[4].Width = 170;
+            //dataGridView1.Columns[3].Width = 170;
+            //dataGridView1.Columns[4].Width = 170;
 
             dataGridView2.DataSource = clsInternationalLicense.GetDataInternationalToHistoryLicense(PersonID);
             //dataGridView2.Columns[3].Width = 170;

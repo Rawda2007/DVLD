@@ -17,19 +17,20 @@ namespace DVLD_DataAccess
             {
                 conn.Open();
                 string Query = @"  SELECT  [DetainID]
-                  ,Licenses.LicenseID
-                  ,[DetainDate]
-                  ,[FineFees]
-                  ,[IsReleased]
-                  ,[ReleaseDate]
-	              ,People.FirstName+' '+People.SecondName+' '+People.ThirdName+' '+People.LastName as Name
-	              ,People.NationalNo
-                  ,[ReleaseApplicationID]
-              FROM [DetainedLicenses]
-              inner join Licenses on Licenses.LicenseID=DetainedLicenses.LicenseID
-              inner join Applications on Licenses.ApplicationID=Applications.ApplicationID
-              inner join People on People.PersonID= Applications.ApplicantPersonID
-               order by DetainID desc";
+      ,Licenses.LicenseID
+      ,[DetainDate]
+      ,[FineFees]
+      ,[IsReleased]
+      ,[ReleaseDate]
+	  ,People.FirstName+' '+People.SecondName+' '+People.ThirdName+' '+People.LastName as ame
+	  ,People.NationalNo
+      ,[ReleaseApplicationID]
+  FROM [DetainedLicenses]
+  inner join Licenses on Licenses.LicenseID=DetainedLicenses.LicenseID
+  inner join Applications on Licenses.ApplicationID=Applications.ApplicationID
+  inner join People on People.PersonID= Applications.ApplicantPersonID
+   order by DetainID desc
+";
                 SqlCommand cmd = new SqlCommand(Query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -109,6 +110,20 @@ namespace DVLD_DataAccess
                 cmd.Parameters.AddWithValue("@DetainID", DetainedID);
                 cmd.ExecuteNonQuery();
             }
+        }
+        public static bool DoReleaseDetaintedLicenses(int DetaintedID)
+        {
+            int IsReleased = 0;
+            using (SqlConnection conn = new SqlConnection(clsLinkConnectionDB.StringConnection))
+            {
+                conn.Open();
+                string Query = @"    select count(*) from DetainedLicenses
+  where DetainID=@DetainedID and IsReleased=1";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.AddWithValue("@DetainedID", DetaintedID);
+                IsReleased = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            return IsReleased>0;
         }
     }
 }

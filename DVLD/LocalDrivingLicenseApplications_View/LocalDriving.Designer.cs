@@ -92,7 +92,7 @@
             this.toolStripSeparator1,
             this.refrashToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(321, 308);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(321, 280);
             // 
             // toolStripMenuItem1
             // 
@@ -201,7 +201,7 @@
             // 
             // Filter
             // 
-            this.Filter.Location = new System.Drawing.Point(339, 132);
+            this.Filter.Location = new System.Drawing.Point(322, 136);
             this.Filter.Name = "Filter";
             this.Filter.Size = new System.Drawing.Size(204, 24);
             this.Filter.TabIndex = 20;
@@ -210,10 +210,11 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(114, 132);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 24);
+            this.comboBox1.Size = new System.Drawing.Size(182, 29);
             this.comboBox1.TabIndex = 19;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 

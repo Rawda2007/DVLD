@@ -39,18 +39,7 @@ namespace DVLD.International_License
 
             }
 
-            //Application License
-            DataTable dt2=clsInternationalLicense.GetDataInternationalByLicenseID(LicenseID);
-            AppID.Text = dt2.Rows[0]["ApplicationID"].ToString();
-            IID.Text = dt2.Rows[0]["InternationalLicenseID"].ToString();
-            this.licenseID.Text= dt2.Rows[0]["IssuedUsingLocalLicenseID"].ToString();
-            IDate.Text = Convert.ToDateTime( dt2.Rows[0]["IssueDate"]).ToString("yyyy-MM-dd");
-            ExpDate.Text = Convert.ToDateTime(dt2.Rows[0]["ExpirationDate"]).ToString("yyyy-MM-dd");
-            Fees.Text = clsAppliction_Type.FeesTypeByTypeID(6).ToString();
-            IsActive.Text = Convert.ToBoolean(dt2.Rows[0]["IsActive"]) ? "Active" : "Inactive";
-            UserName.Text = dt2.Rows[0]["CreatedByUserID"].ToString();
-
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

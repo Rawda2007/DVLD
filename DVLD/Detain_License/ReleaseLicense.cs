@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace DVLD.Detain_License
 {
@@ -16,9 +17,56 @@ namespace DVLD.Detain_License
         public ReleaseLicense()
         {
             InitializeComponent();
+            AppFees.Text = clsAppliction_Type.FeesTypeByTypeID(5).ToString();
+
+        }
+        public ReleaseLicense(int licenseID)
+        {
+            
+            InitializeComponent();
+            AppFees.Text = clsAppliction_Type.FeesTypeByTypeID(5).ToString();
+
+            groupBox2.Enabled = false;
+            Filter.Text = licenseID.ToString();
+            Search();
         }
 
-        private void SearchPerson_Click(object sender, EventArgs e)
+        private void Search()
+        {
+            DataTable dt = clsInternationalLicense.GetDataDriveLicenseInfoByLicenseID(Convert.ToInt32(Filter.Text));
+
+            NClass.Text = dt.Rows[0]["ClassName"].ToString();
+            FName.Text = dt.Rows[0]["Name"].ToString();
+            NationalNo.Text = dt.Rows[0]["NationalNo"].ToString();
+            LID.Text = dt.Rows[0]["LicenseID"].ToString();
+            Notes.Text = dt.Rows[0]["Notes"].ToString();
+            if (Notes.Text != "") Notes.Text = "No Notes";
+            DriverID.Text = dt.Rows[0]["DriverID"].ToString();
+            IssueDate.Text = Convert.ToDateTime(dt.Rows[0]["IssueDate"]).ToString("yyyy-MM-dd");
+            exDate.Text = Convert.ToDateTime(dt.Rows[0]["ExpirationDate"]).ToString("yyyy-MM-dd");
+            Reason.Text = dt.Rows[0]["IssueReason"].ToString();
+            IsActive.Text = Convert.ToBoolean(dt.Rows[0]["IsActive"]) ? "Active" : "Inactive";
+            if (!string.IsNullOrEmpty(dt.Rows[0]["ImagePath"].ToString()))
+            {
+
+                //   MessageBox.Show(dt.Rows[0]["ImagePath"].ToString() );
+                pictureBox1.Image = System.Drawing.Image.FromFile(dt.Rows[0]["ImagePath"].ToString());
+
+            }
+            IID.Text = dt.Rows[0]["LicenseID"].ToString();
+
+            //info releaseDetainted
+            DataTable dtDetain = clsDetainLicense.GetInfoDetainedByLicenseID(Convert.ToInt32(Filter.Text));
+            if (dtDetain.Rows.Count == 1)
+            {
+                DetainID.Text = dtDetain.Rows[0]["DetainID"].ToString();
+                DetainDate.Text = Convert.ToDateTime(dtDetain.Rows[0]["DetainDate"]).ToString("yyyy-MM-dd");
+                FineFees.Text = dtDetain.Rows[0]["FineFees"].ToString();
+                TFees.Text = (Convert.ToDecimal(FineFees.Text) + Convert.ToDecimal(AppFees.Text)).ToString();
+            }
+            release.Enabled = true;
+        }
+        private void SearchPersonLogic()
         {
             if (clsLocalDrivingLicenseApp.IsExist(Convert.ToInt32(Filter.Text)))
             {
@@ -46,17 +94,17 @@ namespace DVLD.Detain_License
 
                 //info releaseDetainted
                 DataTable dtDetain = clsDetainLicense.GetInfoDetainedByLicenseID(Convert.ToInt32(Filter.Text));
-                if(dtDetain.Rows.Count==1)
+                if (dtDetain.Rows.Count == 1)
                 {
                     DetainID.Text = dtDetain.Rows[0]["DetainID"].ToString();
                     DetainDate.Text = Convert.ToDateTime(dtDetain.Rows[0]["DetainDate"]).ToString("yyyy-MM-dd");
                     FineFees.Text = dtDetain.Rows[0]["FineFees"].ToString();
-                    TFees.Text = (Convert.ToDecimal(FineFees.Text)+Convert.ToDecimal(AppFees.Text)).ToString();
+                    TFees.Text = (Convert.ToDecimal(FineFees.Text) + Convert.ToDecimal(AppFees.Text)).ToString();
                 }
                 else
                 {
-                    DetainID.Text ="[???]";
-                    DetainDate.Text= "[???]";
+                    DetainID.Text = "[???]";
+                    DetainDate.Text = "[???]";
                     FineFees.Text = "[???]";
                     TFees.Text = "[???]";
                 }
@@ -89,6 +137,12 @@ namespace DVLD.Detain_License
             }
         }
 
+
+        private void SearchPerson_Click(object sender, EventArgs e)
+        {
+            SearchPersonLogic();
+        }
+
         private void release_Click(object sender, EventArgs e)
         {
           AppID.Text=   clsDetainLicense.ReleasedDetainedLicense(Convert.ToInt32(DetainID.Text), NationalNo.Text, UserName.Text).ToString();
@@ -101,7 +155,6 @@ namespace DVLD.Detain_License
         private void ReleaseLicense_Load(object sender, EventArgs e)
         {
             UserName.Text=Properties.Settings.Default.UserName;
-            AppFees.Text=clsAppliction_Type.FeesTypeByTypeID(5).ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -64,12 +64,22 @@ namespace DVLD.Detain_License
                 {
                     MessageBox.Show("This License is  Inactive, you can not detain it .", "Not allow", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     detain.Enabled = false;
+                    Fees.Enabled = false;
+
                     return;
                 }
+                else if (clsDetainLicense.DoLicenseExistInDetain(Convert.ToInt32(IID.Text)))
+                {
+                    MessageBox.Show("This License is already detained, you can not detain it again.", "Not allow", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Fees.Enabled = false;
+                    detain.Enabled = false;
 
+                }
                 else
                 {
                     detain.Enabled = true;
+                    Fees.Enabled = true;
+
                 }
             }
             else
@@ -77,15 +87,12 @@ namespace DVLD.Detain_License
                 MessageBox.Show("Not Found License ID .");
                 Filter.Text = "";
             }
+           
         }
 
         private void detain_Click(object sender, EventArgs e)
         {
-            if(clsDetainLicense.DoLicenseExistInDetain(Convert.ToInt32(IID.Text)))
-            {
-                MessageBox.Show("This License is already detained, you can not detain it again.","Not allow",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
+           
             if(Fees.Text=="" )
             {
                 MessageBox.Show("Please enter Fees Detain.","Required",MessageBoxButtons.OK,MessageBoxIcon.Warning);

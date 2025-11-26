@@ -34,5 +34,9 @@ namespace DVLD_Buisness
 
             return AppID;
         }
+        public static bool DoReleaseDetaintedLicenses(int DetaintedID)
+        {
+          return clsDetainLicenses.DoReleaseDetaintedLicenses(DetaintedID);
+        }
     }
 }
