@@ -1,4 +1,5 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Detain_License;
 using DVLD.Drivers;
 using DVLD.LocalDrivingLicenseApplications_View;
 using DVLD.People;
@@ -135,6 +136,30 @@ namespace DVLD.Main
         private void replacementForLostOrDamagedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm =new Replacement_For_Damaged_Lost();
+            frm.ShowDialog();
+        }
+
+        private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new LocalDriving();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Form frm=new Detain_License.New_Detain_License();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            Form frm=new ReleaseLicense();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Form frm=new List_Detained_License();
             frm.ShowDialog();
         }
     }

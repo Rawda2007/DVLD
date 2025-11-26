@@ -58,6 +58,24 @@
     <Compile Include="Application_Types\Mangement_Application_Types.Designer.cs">
       <DependentUpon>Mangement_Application_Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Detain_License\List_Detained_License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detain_License\List_Detained_License.Designer.cs">
+      <DependentUpon>List_Detained_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detain_License\New_Detain_License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detain_License\New_Detain_License.Designer.cs">
+      <DependentUpon>New_Detain_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detain_License\ReleaseLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detain_License\ReleaseLicense.Designer.cs">
+      <DependentUpon>ReleaseLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\MainDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,10 +212,10 @@
     <Compile Include="Renew_License\Renew_License_Application.Designer.cs">
       <DependentUpon>Renew_License_Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="Replacement_For_Damaged_Lost.cs">
+    <Compile Include="Renew_License\Replacement_For_Damaged_Lost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Replacement_For_Damaged_Lost.Designer.cs">
+    <Compile Include="Renew_License\Replacement_For_Damaged_Lost.Designer.cs">
       <DependentUpon>Replacement_For_Damaged_Lost.cs</DependentUpon>
     </Compile>
     <Compile Include="Test_Types\Edit_Test_Type.cs">
@@ -247,6 +265,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application_Types\Mangement_Application_Types.resx">
       <DependentUpon>Mangement_Application_Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detain_License\List_Detained_License.resx">
+      <DependentUpon>List_Detained_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detain_License\New_Detain_License.resx">
+      <DependentUpon>New_Detain_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detain_License\ReleaseLicense.resx">
+      <DependentUpon>ReleaseLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drivers\MainDrivers.resx">
       <DependentUpon>MainDrivers.cs</DependentUpon>
@@ -324,7 +351,7 @@
     <EmbeddedResource Include="Renew_License\Renew_License_Application.resx">
       <DependentUpon>Renew_License_Application.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Replacement_For_Damaged_Lost.resx">
+    <EmbeddedResource Include="Renew_License\Replacement_For_Damaged_Lost.resx">
       <DependentUpon>Replacement_For_Damaged_Lost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test_Types\Edit_Test_Type.resx">
@@ -568,6 +595,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="International_License\Control\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creative-commons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fees1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
